@@ -52,3 +52,8 @@ chmod +x setup.sh
 
 Yo istalé el estilo 'Simple' y la barra con el tema cuts.
 
+<!--                      GTK theme installation section                     -->
+<h2><a href="#">GTK Configuration</a></h2>
+
+- <a href="https://github.com/vinceliuice/Orchis-theme">GTK Theme (Orchis grey)</a>
+- <a href="https://github.com/ful1e5/BreezeX_Cursor">Cursor (Breeze Light)</a>
