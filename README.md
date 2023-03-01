@@ -23,7 +23,9 @@ Here are some details about my setup:
 
 > Todos los pasos están recogidos aqui, con detalle. No saltes pasos o puedes causar un desastre con todo lo que tenias anteriormente.
 
-## Polybar-themes
+## Polybar
+> Usaremos polybar como nuestra status-bar. No obstante, debemos cambiar el tema que tiene por defecto a uno mas moderno y que esté 'sincronizado' con nuestro escritorio. Para ello, utilizaremos [Polybar Themes](https://github.com/adi1090x/polybar-themes).
+
 
 **Dependencias:**
 - **`Polybar`**
