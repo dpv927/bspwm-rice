@@ -50,3 +50,5 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
+Yo istalé el estilo 'Simple' y la barra con el tema cuts.
+
