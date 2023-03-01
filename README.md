@@ -1,3 +1,5 @@
+<img src="preview.png">
+
 <!--                 Polybar themes installation section                     -->
 <h2><a href="https://github.com/adi1090x/polybar-themes">Polybar-themes</a></h2>
 
