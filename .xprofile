@@ -1,7 +1,4 @@
-#!/bin/sh
-
-# sourced at boot by ~/.xinitrc and most display managers
-
+#!/bin/bash
 # xdg standard configuration location (needed by some applications)
 export XDG_CONFIG_HOME="$HOME/.config"
 
@@ -9,22 +6,10 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.local/bin:$PATH"
 
 # start the compositor (transparency, fade, shadows, blur, etc.)
-picom -b &
-
-# start the network tray application
-nm-applet &
-
-# start the volume tray application
-volumeicon &
-
-# start gnome policy kit agent (password authentication)
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+picom &
 
 # set display timeout, sleep, and poweroff
 xset dpms 600 900 1200
 
 # set keyboard repeat rate
 xset r rate 350 60
-
-# left hand mouse
-#xmodmap -e "pointer = 3 2 1"
