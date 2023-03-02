@@ -83,5 +83,45 @@ sudo mv Orchis* /usr/share/themes
 
 tar -xf Breeze*.gz
 rm Breeze*.gz
-sudo mv Breeze* /usr/share/icons
+sudo mv Breeze* /usr/share/iconsXorg
+```
+
+> Ahora debemos cabiar el contenido de algunos archivos para que se aplique el tema para el cursor:
+
+```bash
+# /usr/share/icons/default/index.theme
+[Icon Theme]
+Inherits=BreezeX-Light
+
+# ~/.gtkrc-2.0
+gtk-cursor-theme-name="BreezeX-Light"
+
+# ~/.config/gtk-3.0/settings.ini
+gtk-cursor-theme-name=BreezeX-Light
+```
+
+> Puede que te interese en este punto copiar el archivo ``.Xresources`` para tener disponible algunas configuraciones extra del X server. No obstante, en este archivo he cambiado el tamaño del cursor ya que a mi se me mostSiraba más pequeño de lo normal. Si no está al tamaño de tu gusto, cabia la siguiente línea:
+
+```x
+Xcursor.size: 30
+```
+
+## Terminal: st
+> Yo uso la terminal de suckless con un tema custom, de modo que si lo quieres utilizar, simplemente copia mi carpeta 'st/' a tu directorio '~/.config'. Después debes compilar e instalar st:
+
+```bash
+# Suponiendo que copiaste el directorio st de este repositorio
+cd ~/.config/st
+sudo make clean install
+```
+
+## Prompt: Bash
+> En mi caso, utilizo bash como interprete de ordenes de la shell, simplemente por costumbre. Puedes copiar tabién mi configuración:
+
+```bash
+# Hacer primero un respaldo de tu configuración
+mv ~/.bashrc ~/.bashrc.bak
+
+# Copiar el archivo desde el repo clonado
+cp ~/bspwm-rice/.bashrc ~/.bashrc
 ```
