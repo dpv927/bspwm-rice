@@ -139,6 +139,6 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
     pamixer -d 2
 XF86MonBrightnessUp
-    xbacklight +10
+    brightnessctl s +5%
 XF86MonBrightnessDown
-    xbacklight -10
+    brightnessctl s 5%-
