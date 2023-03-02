@@ -15,6 +15,9 @@ feh --bg-fill "$HOME/.config/bspwm/nord.jpg" &
 # polybar
 bash ~/.config/polybar/launch.sh --cuts
 
+# picom compositor
+picom &
+
 # set some bsp specific
 bspc monitor -d I II III IV V VI VII VIII IX X
 
