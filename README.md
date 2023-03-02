@@ -145,3 +145,11 @@ mv ~/.bashrc ~/.bashrc.bak
 # Copy the file from the cloned repository
 cp ~/bspwm-rice/.bashrc ~/.bashrc
 ```
+
+## Editor: Nvchad
+
+> I always use [neovim](https://neovim.io/) as my editor. However, I also use it to write and develop my code so I use [nvchad](https://nvchad.com/) to achieve a similar look to what any IDE like vscode offers. If you want to have the same look as in my theme, install nvchad and then copy my configuration file:
+
+```bash
+cp ~/bspwm-rice/nvim/lua/core/* ~/.config/nvim/lua/core/
+```
