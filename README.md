@@ -66,17 +66,6 @@ yay -S ttf-fantasque-sans-mono ttf-droid noto-fonts terminus-font ttf-icomoon-fe
 fc-cache -fv
 ```
 
-> Instalar los temas (Ver repositorio oficial para mas opciones):
-
-```bash
-git clone --depth=1 https://github.com/adi1090x/polybar-themes.git
-cd polybar-themes
-chmod +x setup.sh
-./setup.sh
-```
-
-> Yo istalé el estilo 'Simple' y la barra con el tema 'cuts'.
-
 <!--                      GTK theme installation section                     -->
 ## GTK Configuration
 
