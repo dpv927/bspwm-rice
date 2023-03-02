@@ -21,11 +21,16 @@ Here are some details about my setup:
 
 ## Setup
 
-> Todos los pasos están recogidos aqui, con detalle. No saltes pasos o puedes causar un desastre con todo lo que tenias anteriormente.
+> Todos los pasos están recogidos aqui, con detalle. Tras clonar el repositorio, no hay un orden en los pasos, por lo que tienes total libertad de elegir la sección que te apetezca primero. 
+
+> Empecemos: Debemos clonar el repositorio en un directorio que sea concurrido, por ejemplo el directorio fuente de tu usuario:
+```bash
+cd && git clone https://github.com/dpv927/bspwm-rice.git
+# ahora el repositirio estará en la ruta /home/nombredetuusuario
+```
 
 ## Polybar
-> Usaremos polybar como nuestra status-bar. No obstante, debemos cambiar el tema que tiene por defecto a uno mas moderno y que esté 'sincronizado' con nuestro escritorio. Para ello, utilizaremos [Polybar Themes](https://github.com/adi1090x/polybar-themes).
-
+> Usaremos polybar como nuestra status-bar. No obstante, debemos cambiar el tema que tiene por defecto a uno mas moderno y que esté 'sincronizado' con nuestro escritorio. Para ello, utilizaremos mi confguración personal de [Polybar Themes](https://github.com/adi1090x/polybar-themes). 
 
 **Dependencias:**
 - **`Polybar`**
@@ -66,6 +71,25 @@ yay -S ttf-fantasque-sans-mono ttf-droid noto-fonts terminus-font ttf-icomoon-fe
 fc-cache -fv
 ```
 
+> Copia mi configuración de Polybar en el directorio de configuración:
+
+```bash
+cp -r bspwm-rice/polybar .config/polybar
+```
+
+> Alternativamente, puedes instalar todos los temas disponibles de [Polybar Themes](https://github.com/adi1090x/polybar-themes) como se indica en su sitio oficial y luego copiar mi configuración del tema 'cuts':
+
+```bash
+cp -r ~/bspwm-rice/polybar/cuts ~/.config/polybar/
+```
+
+## Wm: Bspwm
+> Usaremos bspwm](https://github.com/baskerville/bspwm) como window manager. Copia la config:
+
+```bash
+cp -r ~/bspwm-rice/bspwm ~/.config/ # bspwm
+```
+
 <!--                      GTK theme installation section                     -->
 ## GTK Configuration
 
@@ -83,5 +107,45 @@ sudo mv Orchis* /usr/share/themes
 
 tar -xf Breeze*.gz
 rm Breeze*.gz
-sudo mv Breeze* /usr/share/icons
+sudo mv Breeze* /usr/share/iconsXorg
+```
+
+> Ahora debemos cabiar el contenido de algunos archivos para que se aplique el tema para el cursor:
+
+```bash
+# /usr/share/icons/default/index.theme
+[Icon Theme]
+Inherits=BreezeX-Light
+
+# ~/.gtkrc-2.0
+gtk-cursor-theme-name="BreezeX-Light"
+
+# ~/.config/gtk-3.0/settings.ini
+gtk-cursor-theme-name=BreezeX-Light
+```
+
+> Puede que te interese en este punto copiar el archivo ``.Xresources`` para tener disponible algunas configuraciones extra del X server. No obstante, en este archivo he cambiado el tamaño del cursor ya que a mi se me mostSiraba más pequeño de lo normal. Si no está al tamaño de tu gusto, cabia la siguiente línea:
+
+```x
+Xcursor.size: 30
+```
+
+## Terminal: st
+> Yo uso la terminal de suckless con un tema custom, de modo que si lo quieres utilizar, simplemente copia mi carpeta 'st/' a tu directorio '~/.config'. Después debes compilar e instalar st:
+
+```bash
+# Suponiendo que copiaste el directorio st de este repositorio
+cd ~/.config/st
+sudo make clean install
+```
+
+## Prompt: Bash
+> En mi caso, utilizo bash como interprete de ordenes de la shell, simplemente por costumbre. Puedes copiar tabién mi configuración:
+
+```bash
+# Hacer primero un respaldo de tu configuración
+mv ~/.bashrc ~/.bashrc.bak
+
+# Copiar el archivo desde el repo clonado
+cp ~/bspwm-rice/.bashrc ~/.bashrc
 ```
