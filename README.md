@@ -155,10 +155,8 @@ cp -r ~/bspwm-rice/nvim/lua/core/* ~/.config/nvim/lua/core/
 ```
 
 ## Program launcher: Rofi
-> Because I use a theme similar to the popular 'nord' theme, I use [nord-rofi-theme](https://github.com/undiabler/nord-rofi-theme). If you want to install it from the original repo, clone it and follow the instructions. Otherwise, you can copy my rofi files into your config dir:
+> I made a custom rofi theme based in the polybar-themes rofi config, changing the colorscheme to match the desktop theme:
 
 ```bash
 cp -r ~/bspwm-rice/rofi* ~/.config/
 ``` 
-
-> Maybe the window or font size is not ok for you, so you can change the basic config at the `.config/rofi/config.rasi` file.
