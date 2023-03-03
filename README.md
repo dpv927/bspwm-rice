@@ -160,3 +160,11 @@ cp -r ~/bspwm-rice/nvim/lua/core/* ~/.config/nvim/lua/core/
 ```bash
 cp -r ~/bspwm-rice/rofi* ~/.config/
 ``` 
+
+> Instead of that, you can create a 'rofi' folder at your config dir and create a symlink to the polybar's rofi config:
+
+```bash
+cd ~/.config
+mkdir rofi
+ln -s rofi ~/.config/polybar/cuts/scripts/rofi
+```
