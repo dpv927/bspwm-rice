@@ -151,5 +151,14 @@ cp ~/bspwm-rice/.bashrc ~/.bashrc
 > I always use [neovim](https://neovim.io/) as my editor. However, I also use it to write and develop my code so I use [nvchad](https://nvchad.com/) to achieve a similar look to what any IDE like vscode offers. If you want to have the same look as in my theme, install nvchad and then copy my configuration file:
 
 ```bash
-cp ~/bspwm-rice/nvim/lua/core/* ~/.config/nvim/lua/core/
+cp -r ~/bspwm-rice/nvim/lua/core/* ~/.config/nvim/lua/core/
 ```
+
+## Program launcher: Rofi
+> Because I use a theme similar to the popular 'nord' theme, I use [nord-rofi-theme](https://github.com/undiabler/nord-rofi-theme). If you want to install it from the original repo, clone it and follow the instructions. Otherwise, you can copy my rofi files into your config dir:
+
+```bash
+cp -r ~/bspwm-rice/rofi* ~/.config/
+``` 
+
+> Maybe the window or font size is not ok for you, so you can change the basic config at the `.config/rofi/config.rasi` file.
