@@ -2,7 +2,7 @@
   <b> ~ dpv927's configuration files ~ </b>
 </p>
 
-<img src="preview.png">
+<img src="prev.png">
 
 The [setup section](#setup) will guide you through the installation process.<br>
 Here are some details about my setup:
